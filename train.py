@@ -45,10 +45,6 @@ from networks.models.nnformer.nnFormer_tumor import nnFormer
 from networks.models.E_CATBraTS.model import E_CATBraTS
 from networks.models.unetr_pp.network_architecture.tumor.unetr_pp_tumor import UNETR_PP
 
-try:
-    from thesis.models.SegUXNet.model import SegUXNet
-except ModuleNotFoundError:
-    print('model not available, please train with other models')
     
 from functools import partial
 from utils.augment import DataAugmenter
@@ -534,16 +530,7 @@ def main(cfg: DictConfig):
                          conv_op=nn.Conv3d,
                          patch_size= [4,4,4], 
                          window_size=[4,4,8,4]).to(device)
-    # SegConvNet
-    elif cfg.model.architecture == "seg_uxnet":
-        model = SegUXNet(spatial_dims=3, 
-                         init_filters=32, 
-                         in_channels= in_channels,
-                         out_channels=num_classes, 
-                         dropout_prob=0.2, 
-                         blocks_down=(1, 2, 2, 4), 
-                         blocks_up=(1, 1, 1), 
-                         enable_gc=True).to(device)
+
     # E_CATBraTS
     elif cfg.model.architecture == "e_catbrats":
         model = E_CATBraTS(in_channels=in_channels, 
