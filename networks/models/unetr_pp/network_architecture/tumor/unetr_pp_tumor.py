@@ -9,6 +9,7 @@ class UNETR_PP(SegmentationNetwork):
     """
     UNETR++ based on: "Shaker et al.,
     UNETR++: Delving into Efficient and Accurate 3D Medical Image Segmentation"
+    https://github.com/Amshaker/unetr_plus_plus
     """
     def __init__(
             self,

@@ -1,4 +1,4 @@
-irl_pc: /root/autodl-tmp/dataset
+irl_pc: D:\SelfStudyPackage\DeepLearning\MRI_classification\dataset
 laptop_pc: "E:/Brats23 Data/Dataset/BraTS23_mapped/dataset"
 colab: "/gdrive/MyDrive/BraTS2023/"
 sines_pc: /drive/faizanai.rrl/datasets

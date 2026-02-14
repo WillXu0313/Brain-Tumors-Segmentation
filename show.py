@@ -38,11 +38,6 @@ from networks.models.ResUNetpp.model import ResUnetPlusPlus
 from networks.models.UNet.model import UNet3D
 from networks.models.UX_Net.network_backbone import UXNET
 from networks.models.nnformer.nnFormer_tumor import nnFormer
-try:
-    from thesis.models.SegUXNet.model import SegUXNet
-except ModuleNotFoundError:
-    print('model not available, please train with other models')
-    # sys.exit(1)
 
 from functools import partial
 

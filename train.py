@@ -309,7 +309,7 @@ def trainer(cfg,
             
             dices_tc.append(dice_tc)
             dices_et.append(dice_et)
-            dices_wt.append(dices_wt)
+            dices_wt.append(dice_wt)
             mean_dices.append(val_mean_acc)
             if val_mean_acc > val_acc_max:
                 val_acc_max = val_mean_acc
@@ -484,7 +484,7 @@ def main(cfg: DictConfig):
                               channels= (8, 16, 32, 64, 128), 
                               strides = (2, 2, 2, 2),
                                            ).to(device)
-    # ResUNetpp
+    # ResUNetpp-wrong
     elif cfg.model.architecture == "resunet_pp":
         model = ResUnetPlusPlus(in_channels=in_channels,
                                 out_channels=num_classes).to(device)

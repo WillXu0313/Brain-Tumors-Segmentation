@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-# credit: https://github.com/DebeshJha/ResUNetplusplus-PyTorch
+# https://github.com/DebeshJha/ResUNetplusplus
 class Squeeze_Excitation3D(nn.Module):
     def __init__(self, channel, r=8):
         super().__init__()

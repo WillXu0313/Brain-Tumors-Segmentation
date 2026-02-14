@@ -131,6 +131,6 @@ if __name__ == '__main__':
     print(out.shape)
 
 
-    # start_time = time.time()
-    # summary(model=model, input_size=(1, 4, 128, 128, 128), batch_size=1, device="cpu")
-    # print("--- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    summary(model=model, input_size=(1, 4, 128, 128, 128), batch_size=1, device="cpu")
+    print("--- %s seconds ---" % (time.time() - start_time))
